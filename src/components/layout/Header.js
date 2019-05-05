@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
 import {AppBar, Toolbar, Paper, Icon, IconButton, InputBase} from '@material-ui/core'
-import {Popper, Grow, ClickAwayListener, MenuList, MenuItem, Typography, Badge} from '@material-ui/core'
+import {Popover, ClickAwayListener, Typography, Badge} from '@material-ui/core'
 import Avatar from '../../img/Avatar.png'
+import Notification from "../Notification";
 
 class Header extends Component {
     state = {
-        anchorEl: null,
+        anchorEl: null
     };
     handleMenu = event => {
         this.setState({anchorEl: event.currentTarget})
@@ -46,25 +47,26 @@ class Header extends Component {
                                 <Icon>notification_important</Icon>
                             </Badge>
                         </IconButton>
-                        <Popper open={open} anchorEl={this.anchorEl} transition disablePortal>
-                            {({TransitionProps, placement}) => (
-                                <Grow
-                                    {...TransitionProps}
-                                    id="menu-notification"
-                                    style={{transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom'}}
-                                >
-                                    <Paper>
-                                        <ClickAwayListener onClickAway={this.handleClose}>
-                                            <MenuList>
-                                                <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                                                <MenuItem onClick={this.handleClose}>My account</MenuItem>
-                                                <MenuItem onClick={this.handleClose}>Logout</MenuItem>
-                                            </MenuList>
-                                        </ClickAwayListener>
-                                    </Paper>
-                                </Grow>
-                            )}
-                        </Popper>
+                        <Popover style={{top: '50px', padding: '10px 20px'}}
+                            id="menu-notification"
+                            open={open}
+                            anchorEl={this.anchorEl}
+                            onClose={this.handleClose}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'center',
+                            }}
+                        >
+                            <Paper style={{padding: '10px 20px'}}>
+                                <ClickAwayListener onClickAway={this.handleClose}>
+                                    <Notification/>
+                                </ClickAwayListener>
+                            </Paper>
+                        </Popover>
                     </div>
                     <Icon style={{color: '#BCBCCB'}}>more_vert</Icon>
                     <Typography variant="overline">
