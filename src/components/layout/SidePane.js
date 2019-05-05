@@ -28,7 +28,7 @@ function SidePane() {
         {icon: 'settings', value: 'Settings'}]
 
     return (
-        <div class="SidePane" style={style.SidePane}>
+        <div className="SidePane" style={style.SidePane}>
             <AppBar position="static" style={style.AppBar}>
                 <Toolbar>
                     <Typography variant="overline" color="inherit" align='left' style={style.Typography}>
@@ -38,7 +38,7 @@ function SidePane() {
             </AppBar>
             <List component="nav" style={style.List}>
                 {sidePaneNavItems.map((item, index) => (
-                    <ListItem button color="inherit" style={style.ListItem}>
+                    <ListItem button color="inherit" style={style.ListItem} key={index}>
                         <ListItemIcon style={style.ListItemIcon}>
                             <Icon style={style.Icon}>{item.icon}</Icon>
                         </ListItemIcon>

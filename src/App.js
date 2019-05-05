@@ -16,7 +16,7 @@ function App() {
   }
   return (
     <div className="App">
-      <Grid container sm={12} style={style.Grid}>
+      <Grid container style={style.Grid}>
         <Grid item sm={2} style={style.Grid}>
           <SidePane />
         </Grid>
