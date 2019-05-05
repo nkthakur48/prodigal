@@ -16,6 +16,13 @@ function SidePane() {
         List: {
             backgroundColor: '#43425D'
         },
+        ListItem: {
+            paddingBottom: '20px'
+        },
+        ListItemIcon: {
+            paddingLeft: '5px',
+            marginRight: '5px'
+        },
         Icon: {
             color: '#9190AB'
         },
@@ -45,8 +52,8 @@ function SidePane() {
             </AppBar>
             <List component="nav" style={style.List}>
                 {sidePaneNavItems.map((item, index) => (
-                    <ListItem button color="inherit">
-                        <ListItemIcon>
+                    <ListItem button color="inherit" style={style.ListItem}>
+                        <ListItemIcon style={style.ListItemIcon}>
                             <Icon style={style.Icon}>{item.icon}</Icon>
                         </ListItemIcon>
                         <ListItemText disableTypography primary={item.value} style={style.ListItemText}/>
