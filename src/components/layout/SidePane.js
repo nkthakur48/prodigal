@@ -6,29 +6,14 @@ import {List, ListItem, ListItemIcon, ListItemText, Icon} from '@material-ui/cor
 function SidePane() {
 
     const style = {
-        SidePane: {
-            height: '100%',
-            backgroundColor: '#43425D'
-        },
-        AppBar: {
-            backgroundColor: '#3B3B53'
-        },
-        List: {
-            backgroundColor: '#43425D'
-        },
-        ListItem: {
-            paddingBottom: '20px'
-        },
-        ListItemIcon: {
-            paddingLeft: '5px',
-            marginRight: '5px'
-        },
-        Icon: {
-            color: '#9190AB'
-        },
-        ListItemText: {
-            color: '#FFFFFF'
-        }
+        SidePane: {height: '100%', backgroundColor: '#43425D'},
+        Typography: {letterSpacing: '0.2em', fontSize: '15px', fontWeight: 'bold'},
+        AppBar: {backgroundColor: '#3B3B53'},
+        List: {backgroundColor: '#43425D'},
+        ListItem: {paddingBottom: '20px'},
+        ListItemIcon: {paddingLeft: '5px', marginRight: '5px'},
+        Icon: {color: '#9190AB'},
+        ListItemText: {color: '#FFFFFF'}
     }
 
     const sidePaneNavItems = [{icon: 'home', value: 'Home'},
@@ -38,14 +23,15 @@ function SidePane() {
         {icon: 'receipt', value: 'Invoices'},
         {icon: 'person', value: 'Customers'},
         {icon: 'forum', value: 'Chat Room'},
-        {icon: 'calendar_today', value: 'Calendar'},
+        {icon: 'insert_invitation', value: 'Calendar'},
+        {icon: 'donut_small', value: 'Help Center'},
         {icon: 'settings', value: 'Settings'}]
 
     return (
         <div class="SidePane" style={style.SidePane}>
             <AppBar position="static" style={style.AppBar}>
                 <Toolbar>
-                    <Typography variant="h6" color="inherit" align='left'>
+                    <Typography variant="overline" color="inherit" align='left' style={style.Typography}>
                         IMPEKABLE
                     </Typography>
                 </Toolbar>
