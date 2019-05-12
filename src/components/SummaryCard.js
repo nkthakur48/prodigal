@@ -4,7 +4,7 @@ import {Icon, Paper, Typography} from '@material-ui/core'
 function SummaryCard(props) {
 
     const style = {
-        Paper: {padding: '20px', flex: '1', marginRight: '20px'},
+        Paper: {padding: '20px', flex: '9'},
         Title: {fontSize: '15px'},
         Value: {fontSize: '25px', color: '#000000', fontWeight: 'bold'},
         changePercent: {

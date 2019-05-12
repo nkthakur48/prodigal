@@ -7,14 +7,14 @@ import Notification from "../Notification";
 class Header extends Component {
     state = {
         anchorEl: null
-    };
+    }
     handleMenu = event => {
         this.setState({anchorEl: event.currentTarget})
-    };
+    }
 
     handleClose = () => {
         this.setState({anchorEl: null})
-    };
+    }
 
     render() {
         const {anchorEl} = this.state

@@ -61,7 +61,7 @@ function SidePane(props) {
             </AppBar>
             <List component="nav" style={style.List}>
                 {getSidePaneNavItemsWithMeta().map((item, index) => (
-                    <ListItem button color="inherit" style={item.listItemStyle} key={index}>
+                    <ListItem button color="inherit" style={item.listItemStyle} key={item.value} onClick={ () => props.sidePaneTabClickHandler(item.value)}>
                         <ListItemIcon style={style.ListItemIcon}>
                             <Icon style={item.iconStyle}>{item.icon}</Icon>
                         </ListItemIcon>

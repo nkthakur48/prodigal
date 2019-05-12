@@ -11,6 +11,11 @@ class App extends Component {
     state = {
         selectedTab: 'Dashboard'
     }
+
+    sidePaneTabClickHandler = (clickedTabValue) => {
+        this.setState( {selectedTab: clickedTabValue})
+    }
+
     render() {
         const style = {
             Grid: {
@@ -21,11 +26,13 @@ class App extends Component {
             <div className="App">
                 <Grid container style={style.Grid}>
                     <Grid item sm={2} style={style.Grid}>
-                        <SidePane selectedTab={this.state.selectedTab}/>
+                        <SidePane
+                            selectedTab={this.state.selectedTab}
+                            sidePaneTabClickHandler={this.sidePaneTabClickHandler}/>
                     </Grid>
                     <Grid item sm={10} style={style.Grid}>
                         <Header/>
-                        <Home/>
+                        {this.state.selectedTab === 'Dashboard' ? <Home/> : <h1>Tab Content Not Found</h1>}
                     </Grid>
                 </Grid>
             </div>
