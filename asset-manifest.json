@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/prodigal/static/css/main.1d97ad97.chunk.css",
-    "main.js": "/prodigal/static/js/main.124cdae6.chunk.js",
-    "main.js.map": "/prodigal/static/js/main.124cdae6.chunk.js.map",
+    "main.js": "/prodigal/static/js/main.1e842e8b.chunk.js",
+    "main.js.map": "/prodigal/static/js/main.1e842e8b.chunk.js.map",
     "runtime~main.js": "/prodigal/static/js/runtime~main.b1feeb5f.js",
     "runtime~main.js.map": "/prodigal/static/js/runtime~main.b1feeb5f.js.map",
-    "static/js/2.4c315cbb.chunk.js": "/prodigal/static/js/2.4c315cbb.chunk.js",
-    "static/js/2.4c315cbb.chunk.js.map": "/prodigal/static/js/2.4c315cbb.chunk.js.map",
+    "static/js/2.b80a8795.chunk.js": "/prodigal/static/js/2.b80a8795.chunk.js",
+    "static/js/2.b80a8795.chunk.js.map": "/prodigal/static/js/2.b80a8795.chunk.js.map",
     "index.html": "/prodigal/index.html",
-    "precache-manifest.e55c7133945615b9995d8c6c95902d8d.js": "/prodigal/precache-manifest.e55c7133945615b9995d8c6c95902d8d.js",
+    "precache-manifest.603f0eae9eda6a65f8fbc646f04ace5a.js": "/prodigal/precache-manifest.603f0eae9eda6a65f8fbc646f04ace5a.js",
     "service-worker.js": "/prodigal/service-worker.js",
     "static/css/main.1d97ad97.chunk.css.map": "/prodigal/static/css/main.1d97ad97.chunk.css.map"
   }
